@@ -182,24 +182,24 @@ public class SimulationBatch {
 
 	public static void batch(int k) throws FileNotFoundException {
 		int n = 31*k;
-		System.out.println("C[10,"+n+"] ");
+		/*System.out.println("C[10,"+n+"] ");
 		runClusterSimulation(10, n);
 		System.out.println("C[20,"+n+"] ");
-		runClusterSimulation(20, n);
+		runClusterSimulation(20, n);*/
 		System.out.println("C[31,"+n+"] ");
 		runClusterSimulation(31, n);
-		System.out.println("R["+k+",31]");
-		runRingSimulation(k, 31);
+		//System.out.println("R["+k+",31]");
+		//runRingSimulation(k, 31);
 		System.out.println("R[31,"+k+"]");
 		runRingSimulation(31, k);
-		System.out.println("T[5,2,"+k+"]");
-		runTreeSimulation(5, 2, k);
+		//System.out.println("T[5,2,"+k+"]");
+		//runTreeSimulation(5, 2, k);
 		System.out.println("T[3,5,"+k+"]");
 		runTreeSimulation(3, 5, k);
 	}
 	
 	public static void main(String[] argv) throws FileNotFoundException {
-		int[] ks = new int[] {2, 7, 9};
+		int[] ks = new int[] {2};
 		for(int i=0; i<ks.length; i++) {
 			batch(ks[i]);
 		}

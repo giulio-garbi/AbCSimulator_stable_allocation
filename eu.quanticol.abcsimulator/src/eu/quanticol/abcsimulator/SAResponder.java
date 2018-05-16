@@ -54,7 +54,7 @@ public class SAResponder extends ComponentBehaviour {
 	public GetMessage getMessage() {
 		if(dissolveEx) {
 			dissolveEx = false;
-			return new GetMessage(new SADissolveMan(exPartner, id), !proposes.isEmpty());
+			return new GetMessage(new SADissolveMan(exPartner, id), !proposes.isEmpty() && !waitingAck);
 		}
 		if(!proposes.isEmpty() && !waitingAck) {
 			SAPropose propose = proposes.get(0);
