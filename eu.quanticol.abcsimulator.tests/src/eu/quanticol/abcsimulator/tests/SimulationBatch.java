@@ -186,6 +186,8 @@ public class SimulationBatch {
 		runClusterSimulation(10, n);
 		System.out.println("C[20,"+n+"] ");
 		runClusterSimulation(20, n);*/
+		System.out.println("C[1,"+n+"] ");
+		runClusterSimulation(1, n);
 		System.out.println("C[31,"+n+"] ");
 		runClusterSimulation(31, n);
 		//System.out.println("R["+k+",31]");
@@ -199,7 +201,7 @@ public class SimulationBatch {
 	}
 	
 	public static void main(String[] argv) throws FileNotFoundException {
-		int[] ks = new int[] {2};
+		int[] ks = new int[] {4,6,8};
 		for(int i=0; i<ks.length; i++) {
 			batch(ks[i]);
 		}
